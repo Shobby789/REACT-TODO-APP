@@ -25,7 +25,7 @@ function App() {
       <Container className="text-center">
         <h3 className="mt-4">Shoaib's Todo App</h3>
         <Container
-          className="mt-3 w-50 mx-auto border border-warning p-5"
+          className="mt-3 mx-auto border border-warning p-5 w-50"
           style={{ minHeight: "80vh" }}
         >
           <InputGroup>
@@ -46,7 +46,15 @@ function App() {
                   key={id}
                   className="border border-warning w-100 mx-auto mt-4 py-2 px-3 d-flex justify-content-between align-items-center rounded"
                 >
-                  <h3>{item}</h3>
+                  <h3>
+                    <Input
+                      className="mx-2"
+                      addon
+                      // aria-label="Checkbox for following text input"
+                      type="checkbox"
+                    />
+                    {item}
+                  </h3>
                   <Trash3Fill
                     size={20}
                     onClick={() => handleDelete(id)}
